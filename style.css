@@ -12,134 +12,18 @@ body {
                   Header Section 
   ----------------------------------------------------*/
 
-.navContainer {
-  /* background-image: linear-gradient(to right, #0f1511, #15282b); */
-  padding: 0px 102px !important;
-  border-bottom: 1px solid rgb(235, 233, 233);
-}
-
-.navLink {
-  padding-left: 40px;
-  color: #3f3f3f;
-  font-family: "Poppins";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 28px;
-}
-
-/* mouse over link */
-.navLink:hover {
-  color: #0dc8de;
-}
-
-.loginBtn {
-  color: white;
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 32px;
-  padding: 12px 50px;
-  border-radius: 48px !important;
-  border: 2px solid #0dc8de;
-  margin-left: 10px;
-  transition: background-color 0.5s ease;
-}
-
-.loginBtn:hover {
-  color: white;
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 32px;
-  padding: 12px 50px;
-  border-radius: 48px !important;
-  border: 2px solid #0dc8de;
-  background-color: #0dc8de !important;
-}
-
 @media only screen and (max-width: 600px) {
-  .navContainer {
-    padding: 0px 10px !important;
-  }
-
-  .navbar {
-    justify-content: space-between !important;
-  }
-
-  .loginBtn {
-    color: black !important;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 32px;
-    padding: 0px 25px !important;
-    border-radius: 48px !important;
-    border: 2px solid #0dc8de;
-    width: 50%;
-    text-align: center !important;
-  }
-
-  .navLink {
-    padding-left: 10px;
+  .login-btn {
+    margin-bottom: 10px;
   }
 }
 
-@media only screen and (min-device-width: 600px) and (max-device-width: 1034px) {
-  .navContainer {
-    padding: 0px 50px !important;
-  }
-
-  .navbar {
-    justify-content: space-between !important;
-  }
-
-  .loginBtn {
-    color: black !important;
-    font-size: 18px;
-    line-height: 32px;
-    padding: 0px 30px !important;
-    border: 2px solid #0dc8de;
-    width: 55%;
-    text-align: center !important;
-  }
-
-  .loginBtn:hover {
-    color: white;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 32px;
-    padding: 0px 25px !important;
-    border-radius: 48px !important;
-    border: 2px solid #0dc8de;
-    background-color: #0dc8de !important;
-  }
-
-  .navLink {
-    padding-left: 10px;
+@media only screen and (min-device-width: 600px) and (max-device-width: 778px) {
+  .login-btn {
+    margin-bottom: 10px;
   }
 }
 
-@media only screen and (min-device-width: 1024px) and (max-device-width: 1450px) {
-
-
-  .logo {
-    width: 70%;
-  }
-
-  .navContent {
-    width: 80%;
-  }
-
-  .navLink {
-    padding-left: 25px;
-    line-height: 18px;
-  }
-
-  .loginBtn {
-    font-size: 18px;
-    line-height: 32px;
-    padding: 2px 30px;
-    white-space: nowrap;
-  }
-}
 
 /*--------------------------------------------------
                   Banner Section 
@@ -147,6 +31,7 @@ body {
 .bannerContainer {
   background-image: url("./Asset/BannerBg.svg");
   background-repeat: no-repeat;
+  background-position: 0% -150%;
   padding: 0px 102px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -159,7 +44,8 @@ body {
   font-family: "Merienda";
   font-weight: 700;
   font-size: 65px;
-  line-height: 70px;
+  padding-top: 30px;
+  line-height: 130% !important;
 }
 
 .bannerContent {
@@ -174,6 +60,7 @@ body {
   margin-left: auto;
   margin-bottom: 2rem;
   position: relative;
+  padding-top: 30px;
 }
 
 .rightCol {
@@ -190,9 +77,22 @@ body {
   height: 118px;
   text-align: center;
   position: absolute;
-  top: 0;
-  left: 10%;
+  top: 10%;
+  left: 20%;
   right: 0;
+  z-index: 2;
+
+  animation: count 2s ease-in infinite;
+}
+
+@keyframes count {
+  0% {
+    top: 0%;
+  }
+
+  100% {
+    top: 5%;
+  }
 }
 
 .subscribe {
@@ -217,7 +117,6 @@ body {
 @media only screen and (max-width: 600px) {
   .bannerContainer {
     padding: 0px 10px !important;
-    padding-bottom: 17% !important;
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     align-items: center;
@@ -247,6 +146,11 @@ body {
     margin: 0% auto;
     margin-bottom: 2rem;
   }
+
+  .subscribeSection {
+    width: 50%;
+    height: 26%;
+  }
 }
 
 @media only screen and (min-device-width: 600px) and (max-device-width: 778px) {
@@ -256,6 +160,13 @@ body {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
+  }
+
+  .searchBtn {
+    background-color: #396c03;
+    padding: 15px 50px;
+    border-radius: 100px;
+    display: inline-flex;
   }
 
   .BannerHeading {
@@ -281,18 +192,33 @@ body {
     width: 75% !important;
     margin: 0% auto;
   }
+
+  .subscribeSection {
+    width: 50%;
+    height: 30%;
+  }
+
+  .subscribe>h1 {
+    font-size: 32px;
+  }
 }
 
 @media only screen and (min-device-width: 778px) and (max-device-width: 1034px) {
   .bannerContainer {
     padding: 0px 50px !important;
-    padding-bottom: 10% !important;
   }
 
   .BannerHeading {
     font-size: 52px;
     line-height: 52px;
     margin-top: 2rem;
+  }
+
+  .searchBtn {
+    background-color: #396c03;
+    padding: 15px 50px;
+    border-radius: 100px;
+    display: inline-flex;
   }
 
   .bannerContent {
@@ -305,11 +231,23 @@ body {
     width: 75% !important;
     margin: 0% auto;
   }
+
+  .subscribeSection {
+    width: 40%;
+    height: 25%;
+  }
+
+  .subscribe>h1 {
+    font-size: 42px;
+  }
 }
 
 @media only screen and (min-device-width: 1035px) and (max-device-width: 1480px) {
-  .bannerContainer {
-    padding-bottom: 8% !important;
+  .searchBtn {
+    background-color: #396c03;
+    padding: 15px 50px;
+    border-radius: 100px;
+    display: inline-flex;
   }
 
   .BannerHeading {
@@ -326,7 +264,9 @@ body {
 }
 
 
-/* Second Part */
+/*--------------------------------------------------
+                  Cycle Section 
+  ----------------------------------------------------*/
 .food-title {
   font-size: 50px;
   font-weight: 700;
@@ -334,15 +274,6 @@ body {
   line-height: 65px;
 }
 
-.right-bg {
-  background-image: url('./Asset/back.png');
-  position: fixed;
-  background-size: cover;
-  background-repeat: no-repeat;
-  animation: moveBackground 4s linear infinite;
-  width:751px;
-  height: 500.67px;
-}
 
 @keyframes moveBackground {
   0% {
@@ -376,14 +307,56 @@ body {
 }
 
 @media only screen and (max-width: 600px) {
-
+  .right-bg {
+    background-image: url('./Asset/back.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    animation: moveBackground 4s linear infinite;
+    width: 751px;
+    height: 500.67px;
+  }
 }
+
 @media only screen and (min-device-width: 600px) and (max-device-width: 778px) {
-
+  .right-bg {
+    background-image: url('./Asset/back.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    animation: moveBackground 4s linear infinite;
+    width: 751px;
+    height: 500.67px;
+  }
 }
+
 @media only screen and (min-device-width: 778px) and (max-device-width: 1034px) {
-
+  .right-bg {
+    background-image: url('./Asset/back.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    animation: moveBackground 4s linear infinite;
+    width: 751px;
+    height: 500.67px;
+  }
 }
-@media only screen and (min-device-width: 1035px) and (max-device-width: 1480px) {
 
+@media only screen and (min-device-width: 1035px) and (max-device-width: 1480px) {
+  .right-bg {
+    background-image: url('./Asset/back.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    animation: moveBackground 4s linear infinite;
+    width: 751px;
+    height: 500.67px;
+  }
+}
+
+@media only screen and (min-device-width: 1480px) and (max-device-width: 1970px) {
+  .right-bg {
+    background-image: url('./Asset/back.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    animation: moveBackground 4s linear infinite;
+    width: 751px;
+    height: 500.67px;
+  }
 }

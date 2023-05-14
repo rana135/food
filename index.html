@@ -18,8 +18,8 @@
 </head>
 
 <body>
-
-    <div class="flex justify-between items-center  navContainer ">
+    <!-- Header -->
+    <!-- <div class="flex justify-between items-center  navContainer ">
         <div class=" navbar">
             <div class="logo">
                 <img src="./Asset/logo.svg" alt="" />
@@ -50,11 +50,68 @@
             </ul>
         </div>
 
-    </div>
+    </div> -->
+
+    <nav
+        class="dark:bg-black dark:text-white flex flex-col md:flex-row items-center md:justify-between px-6 py-4 border-b border-b-gray-60 shadow-sm max-w-screen-2xl mx-auto">
+        <!-- Logo -->
+        <div>
+            <h2 class="text-3xl font-bold">
+                <img src="./Asset/logo.svg" alt="" />
+            </h2>
+        </div>
+        <!-- /End Logo -->
+        <div class="mt-5 md:mt-0">
+            <ul class="flex flex-col md:flex-row md:space-x-5 w-full items-center">
+                <li>
+                    <a
+                        class="font-semibold tracking-tight block cursor-pointer p-2 hover:text-blue-500 transition-colors duration-300">Home</a>
+                </li>
+                <li>
+                    <a
+                        class="font-semibold tracking-tight block cursor-pointer p-2 hover:text-blue-500 transition-colors duration-300">Blog</a>
+                </li>
+                <ul class="menu menu-horizontal px-1 font-bold">
+                    <li tabindex="0">
+                        <a>
+                            EN
+                            <svg class="fill-current" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                viewBox="0 0 24 24">
+                                <path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" />
+                            </svg>
+                        </a>
+                        <ul class="p-2 bg-base-100">
+                            <li><a>BENGLE</a></li>
+                            <li><a>ENGLISH</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <li>
+                    <button class="btn bg-[#396C03] login-btn rounded-full px-6 ">Login</button>
+                </li>
+                <li>
+                    <div class="bg-[#396C03] rounded-full h-10 w-10 flex justify-center items-center text-white">
+                        <div class="relative py-2">
+                            <div class="t-0 absolute left-3">
+                                <p
+                                    class="flex h-2 w-2 items-center justify-center rounded-full bg-[#FF8B00] p-2 text-xs text-white">
+                                    2</p>
+                            </div>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="file: mt-4 h-6 w-6">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
+                            </svg>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
 
     <!----------- Banner ------------->
     <div id="banner" class="bannerContainer ">
-
+        <!--Left Col-->
         <div class="text-white">
             <h1 class="BannerHeading">Order food online from your favourite local restaurants</h1>
             <p class="bannerContent leading-normal">
@@ -64,31 +121,43 @@
                 <div class="relative w-full sm:max-w-2xl sm:mx-auto">
                     <div class="overflow-hidden z-0 rounded-full relative p-3">
                         <form role="form" class="relative flex z-50 bg-white rounded-full">
-                            <input type="text" placeholder="enter your search here"
-                                class="rounded-full flex-1 px-6 py-4 text-gray-700 focus:outline-none">
-                            <button class="searchBtn">Search</button>
+                            <div class="h-10 w-10 bg-[#FF8B00] rounded-full mt-2 ml-2"></div>
+                            <input type="text" placeholder="Enter your location"
+                                class="rounded-full flex-1 pl-3 py-4 text-gray-700 focus:outline-none">
+                            <button class="searchBtn">
+                                <span class="inline-flex"><svg aria-hidden="true" class="mr-2 -ml-1 w-5 h-5" fill="none"
+                                        stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                                    </svg></span>
+                                Search</button>
                         </form>
                     </div>
                 </div>
             </div>
         </div>
 
+        <!--Right Col-->
         <div class="rightCol">
-            <div class=" bannerImg">
-                <img src="./Asset/Group 8.svg" alt="" />
-                <div class="subscribeSection">
-                    <div class="subscribe">
-                        <img src="./Asset/Vector.svg" alt="" srcset="">
-                        <h1>200k+</h1>
+            <div>
+                <img class="plate1-img h-[200px] w-[201.14px] absolute" src="./Asset/plate1.png" alt="">
+                <div>
+                    <img src="./Asset/Group 8.svg" class=" bannerImg" alt="" />
+
+                    <div class="subscribeSection">
+                        <div class="subscribe">
+                            <img src="./Asset/Vector.svg" alt="" srcset="">
+                            <h1>200k+</h1>
+                        </div>
+                        <p>People Delivered</p>
                     </div>
-                    <p>People Delivered</p>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Second Section Start -->
-    <div class="bg-white relative flex flex-col-reverse lg:pt-0 lg:flex-col lg:pb-0 justify-center item">
+    <!-- Cycle Section Start -->
+    <div class="bg-white relative flex flex-col-reverse lg:pt-0 lg:flex-col lg:pb-0 justify-center">
         <div
             class="inset-y-0 top-0 right-0 z-0 w-full max-w-xl px-4 mx-auto md:px-0 lg:pr-0 lg:mb-0 lg:mx-0 lg:w-6/12 lg:max-w-full lg:absolute xl:px-0 flex justify-start items-center right-bg">
             <div id="cycle"></div>
